@@ -53,7 +53,8 @@ a {
     color: inherit;
 }
 
-ul {
+ul,
+li {
     list-style: none;
 }
 
@@ -1194,4 +1195,92 @@ form.search button:hover {
 .showmenu .overlay {
     visibility: inherit;
     opacity: 1;
+}
+
+/* Single page */
+/* breadcrumb */
+.breadcrumb {
+    font-size: var(--font-small);
+    margin-bottom: 2em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    padding: 0 0.35em;
+}
+
+.breadcrumb li:last-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-text-color);
+}
+
+.products.one .item {
+    flex-direction: column;
+}
+
+.products.one .price .discount {
+    font-size: 1em;
+    font-weight: var(--fw7);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 1em;
+    margin: .5em;
+    z-index: 2;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: var(--percent50);
+}
+
+.products.one :where(.big-image, .small-image) {
+    overflow: hidden;
+}
+
+.products.one :where(.big-image, .small-image) img {
+    width: var(--percent100);
+    height: var(--percent100);
+    /* max-width: 100%;
+    max-height: 100%; */
+    object-fit: cover;
+    display: block;
+}
+
+.products.one .big-image {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.products.one .thumbnail-image {
+    object-fit: cover;
+    position: relative;
+    width: 110px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 2em 2em 0;
+}
+
+.products :is(.swiper-button-next, .swiper-button-prev) {
+    outline: 0;
+    color: var(--secondary-dark-color);
+    transition: var(--trans-background), transform .3s;
+}
+
+.products .big-image:hover .swiper-button-next {
+    transform: translateX(10);
+}
+
+.products .big-image:hover .swiper-button-prev {
+    transform: translateX(-10);
+}
+
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
+    font-size: 1.5em;
+}
+
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+    background-color: var(--light-bg-color);
 }
