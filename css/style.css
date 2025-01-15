@@ -541,10 +541,6 @@ header {
 }
 
 /* FOOTER */
-footer {
-    padding: 4rem 0 1rem;
-}
-
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -614,8 +610,6 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-
     .home-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -644,10 +638,3 @@ footer {
         display: none;
     }
 }
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-    .grid-container-2 {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-} */
