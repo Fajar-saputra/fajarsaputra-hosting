@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A simple HTML-only website for roadmap.sh frontend" />
+    <meta name="keywords" content="Frontend Project, HTML, Roadmap.sh" />
+    <meta name="author" content="Fajar saputra" />
+    <title>Basic HTML Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="flexcenter">
+        <i class='bx bx-menu' id="menu-toggle"></i>
+        <div class="logo">fajar<span>saputra</span></div>
+        <nav aria-label="Primary Navigation">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="toggle-theme" onclick="toggleTheme()" id="toggle-theme">
+            <i class='bx bxs-sun' id="sun_icon"></i>
+            <i class='bx bxs-moon ' id="moon_icon" style="display: none;"></i>
+        </button>
+    </header>
+
+    <main>
+        <div class="container articles">
+            <article>
+                <h1 class="section-title">Articles</h1>
+                <ul>
+                    <li>
+                        <h2>Learning Flexbox</h2>
+                        <p>Mastering the art of flexible box layout in CSS.</p>
+                        <a href="learning-flexbox.html">Read More</a>
+                    </li>
+                    <li>
+                        <h2>Understanding Grid</h2>
+                        <p>Unlocking the power of grid layout for responsive design.</p>
+                        <a href="understanding-grid.html">Read More</a>
+                    </li>
+                    <li>
+                        <h2>Media Query Essentials</h2>
+                        <p>Optimizing your website for different screen sizes with media queries.</p>
+                        <a href="media-query-essentials.html">Read More</a>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </main>
+    <footer class="footer-wrapper flexcenter">
+        <p>&copy; <span id="current-year"></span> All rights reserved</p>
+        <a href="https://github.com/Fajar-saputra" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/fajar-saputra" target="_blank">LinkedIn</a>
+    </footer>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
